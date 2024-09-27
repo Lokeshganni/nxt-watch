@@ -1,7 +1,8 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import {LuSearch} from 'react-icons/lu'
+// import {LuSearch} from 'react-icons/lu'
+import {AiOutlineSearch} from 'react-icons/ai'
 import Header from '../Header'
 import HomeBannerSection from '../HomeBannerSection'
 import SideBar from '../SideBar'
@@ -141,7 +142,7 @@ class Home extends Component {
                         isDarkTheme={isDarkTheme}
                         type="button"
                       >
-                        <LuSearch size={20} />
+                        <AiOutlineSearch size={20} />
                       </SearchButton>
                     </div>
                     {this.renderVideosList(isDarkTheme)}

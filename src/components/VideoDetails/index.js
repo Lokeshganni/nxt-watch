@@ -3,7 +3,8 @@ import ReactPlayer from 'react-player'
 import Cookies from 'js-cookie'
 import {formatDistanceToNow} from 'date-fns'
 import {BiLike, BiDislike} from 'react-icons/bi'
-import {MdOutlinePlaylistAdd} from 'react-icons/md'
+// import {MdOutlinePlaylistAdd} from 'react-icons/md'
+import {RiPlayListAddFill} from 'react-icons/ri'
 import {TiTick} from 'react-icons/ti'
 import Header from '../Header'
 import SideBar from '../SideBar'
@@ -152,7 +153,7 @@ class VideoDetails extends Component {
                   type="button"
                   onClick={this.handleSaveVideo}
                 >
-                  <MdOutlinePlaylistAdd className="interaction-icon" />
+                  <RiPlayListAddFill className="interaction-icon" />
                   <p className="interaction-para">Save</p>
                 </InteractionButton>
               </AllInteractionsContainer>
