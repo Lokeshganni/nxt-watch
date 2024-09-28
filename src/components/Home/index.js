@@ -127,6 +127,7 @@ class Home extends Component {
                 const {isDarkTheme} = value
                 return (
                   <HomeMainContainer
+                  data-testid='home'
                     isDarkTheme={isDarkTheme}
                     className="home-main-content-container"
                   >
@@ -136,11 +137,13 @@ class Home extends Component {
                         onChange={this.handleSearchedTxt}
                         isDarkTheme={isDarkTheme}
                         type="search"
+
                       />
                       <SearchButton
                         onClick={this.handleSearchBtn}
                         isDarkTheme={isDarkTheme}
                         type="button"
+                         data-testid="searchButton"
                       >
                         <AiOutlineSearch size={20} />
                       </SearchButton>

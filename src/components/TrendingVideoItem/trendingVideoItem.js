@@ -1,16 +1,22 @@
+import {Link} from 'react-router-dom'
 import {formatDistanceToNow} from 'date-fns'
 import {Title, ChannelName, ViewsCount} from './styledComponent'
 import './trendingVideoItem.css'
 
 const TrendingVideoItem = ({video, isDarkTheme}) => {
-  const {channel, publishedAt, thumbnailUrl, title, viewCount} = video
+  const {channel, publishedAt, thumbnailUrl, title, viewCount,id} = video
   const dateDistance = formatDistanceToNow(new Date(publishedAt))
   const date = dateDistance.split(' ').slice(1, 3).join(' ')
 
   return (
     <li className="trending-video-item-li-container">
+    <Link to={`videos/${id}`}>
       <div className="trending-video-item-thumbnail-container">
-        <img className="trending-thumbnail-img" src={thumbnailUrl} alt="img" />
+        <img
+          className="trending-thumbnail-img"
+          src={thumbnailUrl}
+          alt="video thumbnail"
+        />
       </div>
       <div className="video-details-container">
         <div className="channel-logo-container">
@@ -35,6 +41,7 @@ const TrendingVideoItem = ({video, isDarkTheme}) => {
           </div>
         </div>
       </div>
+      </Link>
     </li>
   )
 }

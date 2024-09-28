@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SidebarMainContainer = styled.div`
   background-color: ${props => (props.isDarkTheme ? '#212121' : '#ffffff ')};
 `
-export const ContactUsHeading = styled.h1`
+export const ContactUsHeading = styled.p`
   color: ${props => (props.isDarkTheme ? '#ffffff' : '#1e293b')};
   font-size: 18px;
 `

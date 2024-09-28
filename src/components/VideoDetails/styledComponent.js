@@ -9,7 +9,7 @@ export const VideoItemMainContainer = styled.div`
   color: ${props => (props.isDarkTheme ? '#ffffff' : '#1e293b')};
 `
 
-export const Title = styled.h1`
+export const Title = styled.p`
   font-size: 18px;
   color: ${props => props.isDarkTheme && '#ffffff'};
 `
@@ -40,6 +40,7 @@ export const AllInteractionsContainer = styled.div`
 `
 
 export const InteractionButton = styled.button`
-  color: ${props => (props.isDarkTheme ? '#64748b' : '#1e293b')};
+  //   color: ${props => (props.isDarkTheme ? '#64748b' : '#1e293b')};
+  color: '#2563eb';
   cursor: pointer;
 `

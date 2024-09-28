@@ -38,6 +38,7 @@ class VideoDetails extends Component {
     apiStatus: apiStatusConstants.initial,
     date: '',
     notification: '',
+    isSaved:false
   }
 
   componentDidMount() {
@@ -95,7 +96,7 @@ class VideoDetails extends Component {
   handleSaveVideo = () => {
     const {videoDetails} = this.state
     addBookmark(videoDetails)
-    this.setState({notification: 'video saved successfully!'})
+    this.setState(prevState=>({notification: 'video saved successfully!',isSaved:!prevState.isSaved}))
 
     setTimeout(() => {
       this.setState({notification: ''})
@@ -106,7 +107,7 @@ class VideoDetails extends Component {
     <ThemeContext.Consumer>
       {value => {
         const {isDarkTheme} = value
-        const {videoDetails, channelObj, date, notification} = this.state
+        const {videoDetails, channelObj, date, notification,isSaved} = this.state
         return (
           <VideoItemMainContainer
             isDarkTheme={isDarkTheme}
@@ -155,7 +156,8 @@ class VideoDetails extends Component {
                   onClick={this.handleSaveVideo}
                 >
                   <RiPlayListAddFill className="interaction-icon" />
-                  <p className="interaction-para">Save</p>
+                  {isSaved?'Saved':'Save'}
+                  
                 </InteractionButton>
               </AllInteractionsContainer>
               {notification && (
@@ -171,7 +173,7 @@ class VideoDetails extends Component {
                 <img
                   className="channel-logo"
                   src={channelObj.profileImageUrl}
-                  alt="img"
+                  alt="channel logo"
                 />
                 <div>
                   <ChannelName isDarkTheme={isDarkTheme}>

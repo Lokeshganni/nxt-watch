@@ -1,8 +1,15 @@
-import {RxCross2} from 'react-icons/rx'
+// import {RxCross2} from 'react-icons/rx'
+import {useState} from 'react'
+import {BannerContainer} from './styledComponents'
 import './index.css'
 
-const HomeBannerSection = () => (
-  <div className="home-banner-container">
+const HomeBannerSection = () => {
+    const [close,setClose]=useState(false)
+    const handleCloseBannerBtn=()=>{
+        setClose(true)
+    }
+return(
+  <BannerContainer data-testid='banner' style={{display:`${close && 'none'}`}} className="home-banner-container">
     <img
       className="nav-logo-img"
       src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
@@ -12,10 +19,10 @@ const HomeBannerSection = () => (
     <button className="get-it-now-btn" type="button">
       GET IT NOW
     </button>
-    <button className="cancel-btn" type="button">
-      <RxCross2 />
+    <button  onClick={handleCloseBannerBtn} data-testid='close' className="cancel-btn" type="button">
+      X{/* <RxCross2 /> */}
     </button>
-  </div>
-)
+  </BannerContainer>
+)}
 
 export default HomeBannerSection

@@ -16,7 +16,7 @@ const ReactPopup = ({triggerBtn, history}) => {
         {close => (
           <div className="popup-card">
             <div>
-              <p className="popup-text">Are you sure you want to logout?</p>
+              <p className="popup-text">Are you sure, you want to logout</p>
             </div>
             <div className="popup-btn-container">
               <button

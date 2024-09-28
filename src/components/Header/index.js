@@ -11,6 +11,7 @@ const Header = () => {
     <ul className="sm-header-nav-items-ul-container">
       <li className="nav-items-li-container">
         <button
+        data-testid='theme'
           onClick={() => toggleTheme()}
           className="nav-btn btn"
           type="button"
@@ -41,6 +42,7 @@ const Header = () => {
     <ul className="lg-header-nav-items-ul-container">
       <li className="nav-items-li-container">
         <button
+        data-testid='theme'
           onClick={() => toggleTheme()}
           className="nav-btn btn"
           type="button"
@@ -94,7 +96,7 @@ const Header = () => {
                   <img
                     className="nav-logo-img"
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                    alt="nxt watch logo"
+                    alt="website logo"
                   />
                 </Link>
               )}

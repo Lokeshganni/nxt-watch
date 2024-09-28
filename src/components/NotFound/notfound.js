@@ -28,7 +28,7 @@ const NotFound = () => (
               />
               <Heading isDarkTheme={isDarkTheme}>Page Not Found</Heading>
               <Para>
-                We are sorry, the page you requested could not be found.
+                we are sorry, the page you requested could not be found.
               </Para>
             </Container>
           </div>

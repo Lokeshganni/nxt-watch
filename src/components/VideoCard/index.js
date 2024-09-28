@@ -16,9 +16,9 @@ const VideoCard = ({videoObj, isDarkTheme}) => {
   return (
     <li className="video-li-card-container">
       <Link className="link-ele" to={`/videos/${id}`}>
-        <img className="thumbnail-img" src={thumbnailUrl} alt={id} />
+        <img className="thumbnail-img" src={thumbnailUrl} alt='video thumbnail' />
         <div className="video-description-container">
-          <img className="profile-img" src={profileImageUrl} alt={name} />
+          <img className="profile-img" src={profileImageUrl} alt='channel logo' />
           <div>
             <VideoTitle isDarkTheme={isDarkTheme} className="video-title">
               {title}
